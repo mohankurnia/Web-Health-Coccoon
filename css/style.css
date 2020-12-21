@@ -1,0 +1,210 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    box-sizing: border-box;
+    position: relative;
+}
+
+nav {
+    background-color: #ececec;
+    border-bottom: 3px solid #75d7e0;
+}
+
+/* .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 130px;
+} */
+
+.navbar-nav a {
+    margin-left: 40px;
+    color: #2d2d2d;
+    transform: skew(-15deg);
+}
+
+.navbar-nav a span {
+    display: inline-block;
+    padding: 3px 10px;
+}
+
+.navbar-nav a span:hover {
+    background-color: #bbc39c;
+    transition: 0.5s;
+}
+
+.carousel {
+    z-index: -1;
+}
+
+.carousel-inner {
+    height: 800px;
+}
+
+.carousel-inner img {
+    filter: blur(2px);
+}
+
+/* section::before {
+    padding-top: 150px;
+    content: '';
+    display: block;
+} */
+
+section {
+    z-index: 2;
+}
+
+section .slider-section {
+    position: relative;
+}
+
+section .product {
+    z-index: 2;
+    margin-top: -500px;
+    margin-bottom: 208px;
+    /* margin-left: 5%; */
+}
+
+section .product a {
+    display: inline-block;
+    margin-top: 50px;
+    text-decoration: none;
+    color: #2d2d2d;
+    padding: 5px 24px;
+    border: 2px solid #2d2d2d;
+    border-radius: 10px;
+}  
+
+.parallax {
+    height: 370px;
+    background-image: url(../image/slider/slider2.jpg);
+    background-size: 100%;
+    /* background-position: 0 -120px; */
+    background-repeat: no-repeat;
+}
+
+.parallax h1, 
+.parallax p, 
+.parallax a {
+    text-shadow: 0.5px 0.5px 1px #fff;
+}
+
+.parallax a {
+    box-shadow: 0.5px 0.5px 1px #fff;
+}
+
+.parallax h2 {
+    color: #75d7e0;
+    font-weight: 200;
+    font-style: italic;
+    text-shadow: 1px 1px 0.5px rgba(0, 0, 0, 1);
+}
+
+.parallax a {
+    display: inline-block;
+    color: #343a40;
+    text-decoration: none;
+    padding: 5px 20px;
+    border: 2px solid #343a40;
+    border-radius: 20px;
+}
+
+section hr {
+    background-color: #75d7e0;
+    height: 2px;
+    border-radius: 15px;
+}
+
+section#blog .card {
+    border: none;
+    cursor: pointer;
+}
+
+section#blog .card p {
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    line-height: 80px;
+    color: #75d7e0;
+    margin-top: -25px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+section#contact {
+    border-bottom: 4px solid white;
+}
+
+section#contact h2 {
+    letter-spacing: 8px;
+}
+
+section#contact input {
+    border: #75d7e0;
+}
+
+section#contact button {
+    border-radius: 0;
+}
+
+section.footer ul li {
+    list-style: none;
+    margin-bottom: 10px;
+    color: #867e7e;
+}
+
+section.footer ul li a {
+    text-decoration: none;
+    color: #867e7e;
+}
+
+section.footer ul li a:hover {
+    color: #9b9292;
+    transition: 0.5s;   
+}
+
+section.footer .socmed {
+    margin: 0 auto;
+    text-align: center;
+}
+
+section.footer .socmed a:hover {
+    opacity: 0.5;
+}
+
+section.copyright {
+    background-color: black;
+    border-bottom: 5px solid #867e7e;
+}
+
+@media (max-width: 992px) {
+    section .headline {
+        background-color: #f8f9fa;
+    }
+    
+    section .carousel {
+        display: none;
+    }
+
+    section .product {
+        margin-top: 200px;
+    }
+
+    section .product {
+        margin-bottom: -10px;
+    }
+}
+
+@media (max-width: 530px) {
+    section.parallax {
+        background-color: #f8f9fa;
+        background-image: none;
+        color: #867e7e;
+    }
+
+    section.parallax a {
+        margin-top: -20%;
+    }
+}
