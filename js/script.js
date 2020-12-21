@@ -2,16 +2,12 @@ $('.carousel').carousel({
     interval: 500
 });
 
-$('body').scrollSpy({target: ".navbar", offset: 150});
+$('.navbar .nav-link').click(function(event) {
+    const destinat = $(this).attr('href');
+    const destinatElement = $(destinat);
+    $('html, body').animate({
+        scrollTop: destinatElement.offset().top - 150
+    }, 1500, 'easeInOutExpo');
 
-$('.navbar-brand, #home, #about, #services, #blog, #contact').click(function(event) {
-    if(this.hash !== "") {
-        event.preventDefault();
-        let hash = this.hash;
-        $('html, body, section').animate({
-                scrollTop: $(hash).offset().top
-            }, 1500, function() {
-                window.location.hash = hash;
-            });
-    }
+    event.preventDefault();
 });
