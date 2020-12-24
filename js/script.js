@@ -2,12 +2,18 @@ $('.carousel').carousel({
     interval: 500
 });
 
-$('.navbar .nav-link').click(function(event) {
-    const destinat = $(this).attr('href');
-    const destinatElement = $(destinat);
-    $('html, body').animate({
-        scrollTop: destinatElement.offset().top - 150
-    }, 1500, 'easeInOutExpo');
+$('.page-scroll').on('click', function(e) {
 
-    event.preventDefault();
+    // Take the href
+    const tujuan = $(this).attr('href');
+    // Catch the Current Element
+    const elemenTujuan = $(tujuan);
+
+    // Change the scroll destination
+    $('html, body').animate({
+        scrollTop: elemenTujuan.offset().top-100
+    }, 1000, 'easeInOutExpo');
+
+    e.preventDefault();
+
 });
